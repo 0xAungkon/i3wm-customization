@@ -58,11 +58,11 @@ fi
 ############# 2. Random Image From picsum.photos ####################
 
 
-if [ "$is_root" = false ]; then
-    fname="$HOME/Pictures/$(date +%Y%m%d%H%M%S).jpg"
-    wget -O "$fname" "https://bing.biturl.top/?resolution=1920&format=image&index=random&mkt=en-US"
-    cp -f "$fname" /tmp/wallpaper.jpg
-fi
+# if [ "$is_root" = false ]; then
+#     fname="$HOME/Pictures/$(date +%Y%m%d%H%M%S).jpg"
+#     wget -O "$fname" "https://bing.biturl.top/?resolution=1920&format=image&index=random&mkt=en-US"
+#     cp -f "$fname" /tmp/wallpaper.jpg
+# fi
 ############# 3. Random Image From bing ####################
 
 
@@ -87,5 +87,9 @@ else
     xinput --set-prop $id $natural_scrolling_id 1
     ############# 5. Touchpad Set to Natural Click ####################
 fi
+
+
+killall -q polybar
+polybar --config=$HOME/.config/i3/polybar.ini &
 
 
