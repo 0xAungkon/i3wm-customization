@@ -193,6 +193,7 @@ bar {
         mode hide
 }
 
+exec_always --no-startup-id ~/.config/i3/boot.sh
 
 
 
@@ -206,6 +207,6 @@ bindsym $mod+Ctrl+v exec --no-startup-id copyq toggle
 bindsym $mod+Ctrl+s exec --no-startup-id flameshot gui
 
 
-bindsym $mod+d exec --no-startup-id rofi -show window
-bindsym $mod+Shift+d exec --no-startup-id rofi -show drun
+bindsym $mod+Shift+d exec --no-startup-id rofi -show window
+bindsym $mod+d exec --no-startup-id rofi -show drun
 bindsym $mod+Ctrl+d exec --no-startup-id rofi -show run
