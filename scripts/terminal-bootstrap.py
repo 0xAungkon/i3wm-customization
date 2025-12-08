@@ -87,8 +87,10 @@ def tmux_up():
             sessions.append(line.split(":")[0])
 
     # attach if exists, otherwise create (directly in current shell, no terminal)
+
     if name in sessions:
         subprocess.run(["tmux", "attach", "-t", name])
+    
     else:
         if name:
             subprocess.run(["tmux", "new", "-s", name])

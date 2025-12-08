@@ -53,3 +53,6 @@ else
 fi
 ######### 1. Install The Softwares Needed ##############
 
+ln -s ~/.config/i3/configs/tmux.conf ~/.tmux.conf   
+
+######### 2. Link The Tmux Config File ##################
