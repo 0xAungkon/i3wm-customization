@@ -18,6 +18,7 @@ if [ "$is_root" = true ]; then
         "rofi"
         "feh"
         "xinput"
+        "pavucontrol"
     )
     # Require sudo upfront
 
