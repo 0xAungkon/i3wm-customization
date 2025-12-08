@@ -1,19 +1,16 @@
 #!/bin/bash
 
-# if [ "$is_root" = false ]; then
-    # fname="$HOME/Pictures/$(date +%Y%m%d%H%M%S).jpg"
-    # wget -O "$fname" "https://picsum.photos/1920/1080"
-    # cp -f "$fname" /tmp/wallpaper.jpg
-# fi
+# fname="$HOME/Pictures/$(date +%Y%m%d%H%M%S).jpg"
+# wget -O "$fname" "https://picsum.photos/1920/1080"
+# cp -f "$fname" /tmp/wallpaper.jpg
 ############# 1. Random Image From picsum.photos ####################
 
 
-# if [ "$is_root" = false ]; then
-#     fname="$HOME/Pictures/$(date +%Y%m%d%H%M%S).jpg"
-#     wget -O "$fname" "https://bing.biturl.top/?resolution=1920&format=image&index=random&mkt=en-US"
-#     cp -f "$fname" /tmp/wallpaper.jpg
-# fi
-############# 1. Random Image From bing ####################
+
+fname="$HOME/Pictures/$(date +%Y%m%d%H%M%S).jpg"
+wget -O "$fname" "https://bing.biturl.top/?resolution=1920&format=image&index=random&mkt=en-US"
+cp -f "$fname" "$HOME/Pictures/wallpaper.jpg"
+############ 1. Random Image From bing ####################
 
 
 id=`xinput list | grep -i "Touchpad" | cut -d'=' -f2 | cut -d'[' -f1`

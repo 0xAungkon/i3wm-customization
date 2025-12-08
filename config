@@ -197,7 +197,7 @@ exec_always --no-startup-id ~/.config/i3/boot.sh
 
 
 
-exec_always feh --bg-fill '/tmp/wallpaper.jpg' 
+exec_always feh --bg-fill "$HOME/Pictures/wallpaper.jpg" 
 exec_always copyq --start-server
 for_window [class="copyq"] floating enable, resize set 600 400
 
