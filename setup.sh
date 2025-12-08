@@ -19,6 +19,9 @@ if [ "$is_root" = true ]; then
         "feh"
         "xinput"
         "pavucontrol"
+        "tmux"
+        "qterminal"
+        "python3-psutil"
     )
     # Require sudo upfront
 
