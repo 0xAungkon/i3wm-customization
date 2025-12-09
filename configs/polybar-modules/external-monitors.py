@@ -13,7 +13,7 @@ RESET = "\033[0m"
 ########### Set The Color Codes ###########
 
 # Load data if it exists
-file_path = "~/.config/i3/data.pkl"
+file_path = os.path.expanduser("~/.config/i3/data.pkl")
 
 presist_data={}
 if os.path.exists(file_path):
@@ -50,7 +50,7 @@ def show_monitor():
         message=''
 
         if not 'focused_monitor' in presist_data:
-            presist_data['focused_monitor']=monitor['name']
+            presist_data['focused_monitor']=monitor
         
         focused_monitor=monitor
 
