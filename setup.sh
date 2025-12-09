@@ -53,15 +53,10 @@ else
 fi
 ######### 1. Install The Softwares Needed ##############
 
-ln -s ~/.config/i3/configs/tmux.conf ~/.tmux.conf   
-
+ln -s /home/$USER/.config/i3/configs/tmux.conf /home/$USER/.tmux.conf
 ######### 2. Link The Tmux Config File ##################
 
-chmod -R +x ~/.config/i3/config
-
-######### 2. Link The Tmux Config File ##################
-
-chmod -R +x ~/.config/i3/*.sh
-chmod -R +x ~/.config/i3/*.py
-chmod -R +x ~/.config/i3/config
+chmod -R +x /home/$USER/.config/i3/*.sh
+chmod -R +x /home/$USER/.config/i3/*.py
+chmod -R +x /home/$USER/.config/i3/config
 ######### 3. Make pre-boot.sh Executable ##################
