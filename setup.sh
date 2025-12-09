@@ -44,12 +44,9 @@ done
 echo "All checks completed."
 
 
-######### 1. Install The Softwares Needed ##############
-
-ln -s ~/.config/i3/configs/tmux.conf ~/.tmux.conf
-######### 2. Link The Tmux Config File ##################
+######### Install The Softwares Needed ##############
 
 find ~/.config/i3 -type f -name "*.sh" -exec chmod +x {} \;
 find ~/.config/i3 -type f -name "*.py" -exec chmod +x {} \;
 chmod -R +x ~/.config/i3/config
-######### 3. Make pre-boot.sh Executable ##################
+######### Make pre-boot.sh Executable ##################
