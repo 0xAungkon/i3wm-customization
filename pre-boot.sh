@@ -34,4 +34,3 @@ else
     xinput --set-prop $id $natural_scrolling_id 1
     ############# 2. Touchpad Set to Natural Click ####################
 fi
-

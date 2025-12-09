@@ -13,10 +13,9 @@ set $mod Mod4
 exec_always --no-startup-id ~/.config/i3/pre-boot.sh
 exec --no-startup-id picom --config ~/.config/i3/configs/picom.conf
 
+exec xrandr --output HDMI-A-0 --brightness 0.4
 
 exec polybar --config=$HOME/.config/i3/configs/polybar.ini 
-
-exec xrandr --output HDMI-A-0 --brightness 0.8
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -232,3 +231,7 @@ bindsym $mod+Ctrl+s exec --no-startup-id flameshot gui
 bindsym $mod+d exec --no-startup-id rofi -show window -theme ~/.config/i3/configs/rofi.rasi
 bindsym $mod+Shift+d exec --no-startup-id rofi -show drun -theme ~/.config/i3/configs/rofi.rasi
 bindsym $mod+Ctrl+d exec --no-startup-id rofi -show run -theme ~/.config/i3/configs/rofi.rasi
+
+exec --no-startup-id sh -c "sleep 10 && ~/.config/i3/configs/polybar-modules/external-monitors.py --brightness-restore"
+# exec --no-startup-id sh -c "while ! xrandr | grep ' connected '; do sleep 1; done; ~/.config/i3/configs/polybar-modules/external-monitors.py --brightness-restore"
+

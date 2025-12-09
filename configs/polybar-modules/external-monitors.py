@@ -53,7 +53,6 @@ def show_monitor():
             presist_data['focused_monitor']=monitor
         
         focused_monitor=monitor
-
         if focused_monitor['name']==monitor['name']:
             message=f"{monitor['name']}: {monitor['brightness']}%"
 
@@ -87,6 +86,7 @@ def brightness_up():
         if 'Brightness:' in line and current_monitor == focused_monitor:
             current_brightness = float(line.split()[-1])
             break
+    
 
     # Increase by 5%, round up to nearest multiple of 5
     new_brightness = int(current_brightness * 100)
@@ -96,6 +96,12 @@ def brightness_up():
 
     # Apply new brightness
     subprocess.run(['xrandr', '--output', focused_monitor, '--brightness', str(new_brightness / 100)])
+
+    if 'monitors' not in presist_data:
+        presist_data['monitors'] = {}
+    if focused_monitor not in presist_data['monitors']:
+        presist_data['monitors'][focused_monitor] = {}
+    presist_data['monitors'][focused_monitor]['brightness'] = str(new_brightness / 100)
 
 def brightness_down():
     focused_monitor = presist_data['focused_monitor']['name']
@@ -117,8 +123,23 @@ def brightness_down():
 
     # Apply new brightness
     subprocess.run(['xrandr', '--output', focused_monitor, '--brightness', str(new_brightness / 100)])
+    
+    if 'monitors' not in presist_data:
+        presist_data['monitors'] = {}
+    if focused_monitor not in presist_data['monitors']:
+        presist_data['monitors'][focused_monitor] = {}
+    presist_data['monitors'][focused_monitor]['brightness'] = str(new_brightness / 100)
 
-
+def brightness_restore():
+    print(presist_data)
+    if 'monitors' in presist_data:
+        
+        for presist_monitor in presist_data['monitors']:
+            monitor_name = presist_monitor
+            brightness = float(presist_data['monitors'][monitor_name].get('brightness', 1.0))
+            # Apply saved brightness
+            subprocess.run(['xrandr', '--output', monitor_name, '--brightness', str(brightness)])
+ 
 ########### CLI Commands ###########
 
 import sys
@@ -142,6 +163,9 @@ elif action == '--brightness-up':
 
 elif action == '--brightness-down':
     brightness_down()
+
+elif action == '--brightness-restore':
+    brightness_restore()
     
 else:
     print("Invalid action")
