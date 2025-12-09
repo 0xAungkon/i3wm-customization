@@ -145,6 +145,24 @@ bindsym $mod+8 workspace number $ws8
 bindsym $mod+9 workspace number $ws9
 bindsym $mod+0 workspace number $ws10
 
+
+bindsym $mod+Ctrl+1 exec --no-startup-id python3 ~/.config/i3/scripts/window-control.py 1
+bindsym $mod+Ctrl+2 exec --no-startup-id python3 ~/.config/i3/scripts/window-control.py 2
+bindsym $mod+Ctrl+3 exec --no-startup-id python3 ~/.config/i3/scripts/window-control.py 3
+bindsym $mod+Ctrl+4 exec --no-startup-id python3 ~/.config/i3/scripts/window-control.py 4
+bindsym $mod+Ctrl+5 exec --no-startup-id python3 ~/.config/i3/scripts/window-control.py 5
+bindsym $mod+Ctrl+6 exec --no-startup-id python3 ~/.config/i3/scripts/window-control.py 6
+bindsym $mod+Ctrl+7 exec --no-startup-id python3 ~/.config/i3/scripts/window-control.py 7
+bindsym $mod+Ctrl+8 exec --no-startup-id python3 ~/.config/i3/scripts/window-control.py 8
+bindsym $mod+Ctrl+9 exec --no-startup-id python3 ~/.config/i3/scripts/window-control.py 9
+
+
+
+
+
+
+
+
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace number $ws1
 bindsym $mod+Shift+2 move container to workspace number $ws2
