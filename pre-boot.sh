@@ -35,7 +35,3 @@ else
     ############# 2. Touchpad Set to Natural Click ####################
 fi
 
-
-# killall -q polybar
-# polybar --config=$HOME/.config/i3/configs/polybar.ini 
-############# 3. Initiate Polybar ####################
