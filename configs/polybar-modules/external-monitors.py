@@ -13,7 +13,8 @@ RESET = "\033[0m"
 ########### Set The Color Codes ###########
 
 # Load data if it exists
-file_path = "/tmp/external-monitors.pkl"
+file_path = "~/.config/i3/data.pkl"
+
 presist_data={}
 if os.path.exists(file_path):
     with open(file_path, "rb") as f:
@@ -51,7 +52,7 @@ def show_monitor():
         if not 'focused_monitor' in presist_data:
             presist_data['focused_monitor']=monitor['name']
         
-        focused_monitor=presist_data['focused_monitor']
+        focused_monitor=monitor
 
         if focused_monitor['name']==monitor['name']:
             message=f"{monitor['name']}: {monitor['brightness']}%"
