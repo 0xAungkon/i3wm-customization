@@ -17,6 +17,10 @@ packages=(
     "tmux"
     "qterminal"
     "python3-psutil"
+    "network-manager-gnome"
+    "network-manager"
+    "blueman"
+
 )
 # Require sudo upfront
 
