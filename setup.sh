@@ -56,3 +56,8 @@ fi
 ln -s ~/.config/i3/configs/tmux.conf ~/.tmux.conf   
 
 ######### 2. Link The Tmux Config File ##################
+
+chmod -R +x ~/.config/i3/*.sh
+chmod -R +x ~/.config/i3/*.py
+chmod -R +x ~/.config/i3/config
+######### 3. Make pre-boot.sh Executable ##################
