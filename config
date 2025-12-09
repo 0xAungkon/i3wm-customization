@@ -10,10 +10,13 @@
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
 set $mod Mod4
-exec --no-startup-id picom --config ~/.config/i3/configs/picom.conf
 exec_always --no-startup-id ~/.config/i3/pre-boot.sh
+exec --no-startup-id picom --config ~/.config/i3/configs/picom.conf
 
-exec_always xrandr --output HDMI-A-0 --brightness 0.8
+
+exec polybar --config=$HOME/.config/i3/configs/polybar.ini 
+
+exec xrandr --output HDMI-A-0 --brightness 0.8
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.

@@ -36,6 +36,6 @@ else
 fi
 
 
-killall -q polybar
-polybar --config=$HOME/.config/i3/configs/polybar.ini 
+# killall -q polybar
+# polybar --config=$HOME/.config/i3/configs/polybar.ini 
 ############# 3. Initiate Polybar ####################
