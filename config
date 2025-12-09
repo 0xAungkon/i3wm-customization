@@ -56,8 +56,8 @@ floating_modifier $mod
 tiling_drag modifier titlebar
 
 # start a terminal
-bindsym $mod+Shift+Return exec qterminal
-bindsym $mod+Return exec qterminal -e ~/.config/i3/scripts/terminal-bootstrap.py
+#bindsym $mod+Shift+Return exec qterminal
+bindsym $mod+Return exec i3-sensible-terminal -e ~/.config/i3/scripts/terminal-bootstrap.py
 
 # kill focused window
 bindsym $mod+Shift+q kill
